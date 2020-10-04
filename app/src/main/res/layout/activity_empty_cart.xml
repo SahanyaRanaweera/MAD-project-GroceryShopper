@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundhome"
-    tools:context=".DealsActivity">
+    android:isScrollContainer="true"
+    tools:context=".EmptyCartActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -47,8 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/user" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="394dp"
+        android:layout_width="395dp"
         android:layout_height="400dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
@@ -65,10 +65,10 @@
 
         <TextView
             android:id="@+id/categoryName"
-            android:layout_width="378dp"
-            android:layout_height="46dp"
+            android:layout_width="191dp"
+            android:layout_height="35dp"
             android:layout_marginTop="20dp"
-            android:text="@string/deals"
+            android:text="@string/cart"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -76,17 +76,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/background_light"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/categoryName"></androidx.recyclerview.widget.RecyclerView>
+            app:layout_constraintTop_toBottomOf="@+id/categoryName">
+
+
+            <TextView
+                android:id="@+id/emptyCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/rounded_corners"
+            android:padding="10dp"
+            android:onClick="gotoDashboard"
+            android:text="@string/back"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

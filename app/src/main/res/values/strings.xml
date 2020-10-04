@@ -7,7 +7,7 @@
     <string name="register">Register</string>
     <string name="desc">Variety of products</string>
     <string name="desc1">Efficient service</string>
-    <string name="desc2">Cash on delivery. Delivery charge of Rs. 250.  Delivery free for orders over Rs.5000.</string>
+    <string name="desc2">Cash on pick up.</string>
     <string name="uname">Username</string>
     <string name="pwd">Password</string>
     <string name="input" />
@@ -19,7 +19,7 @@
     <string name="phone">Phone Number</string>
     <string name="email">Email</string>
     <string name="logout">Logout</string>
-    <string name="heading">Get your shopping list to your doorstep without any hassle!</string>
+    <string name="heading">Order your shopping list without any hassle!</string>
     <string name="deals">Daily Deals and Recommendations</string>
     <string name="search">Search Items</string>
     <string name="cart">Shopping Cart</string>
@@ -58,4 +58,7 @@
     <string name="totpayment">Payment amount      Rs. 900</string>
     <string name="corder">Confirm order</string>
     <string name="note">Please note that payment will be on delivery</string>
+    <string name="update">Update</string>
+    <string name="remove">Remove</string>
+    <string name="back">Back to Dashboard</string>
 </resources>
