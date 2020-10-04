@@ -113,7 +113,7 @@ public class DBHelperItem extends SQLiteOpenHelper {
                 ItemsMaster.Items.TBL_NAME_2,
                 projection,
                 ItemsMaster.Items.COL_NAME_I_CATEGORY+"=?",
-                new String[]{category},
+                new String[] {category},
                 null,
                 null,
                 null

@@ -41,10 +41,10 @@ public class ShoppingcartActivity extends AppCompatActivity {
         //btnUpdate.setOnClickListener(btnClicked);
 
         user.setText(uname);
-        initListElements();
+        initListElements1();
     }
 
-    private void initListElements() {
+    private void initListElements1() {
         DBHelperShopCart dbHelperShopCart = new DBHelperShopCart(this);
         List<CartModel> listCartItems = dbHelperShopCart.getCartItems(uname);
         if(!listCartItems.isEmpty()) {
@@ -52,22 +52,22 @@ public class ShoppingcartActivity extends AppCompatActivity {
             prices = new double[listCartItems.size()];
             cartModels = listCartItems.toArray(cartModels);
 
-        for(int i = 0 ; i < prices.length; i++){
-            String str = cartModels[i].getPrice().substring(4);
-            prices[i] = Double.parseDouble(str);
-            total += prices[i];
-        }
-        String totalAmount= "Rs. "+String.format("%.2f", total);
-        txttotalAmount.setText(totalAmount);
-            initRecyclerView();
+            for(int i = 0 ; i < prices.length; i++){
+                String str = cartModels[i].getPrice().substring(4);
+                prices[i] = Double.parseDouble(str);
+                total += prices[i];
+            }
+            String totalAmount= "Rs. "+String.format("%.2f", total);
+            txttotalAmount.setText(totalAmount);
+            initRecyclerView1();
         }else{
-            Intent intent1 = new Intent(this,CategoryActivity.class);
+            Intent intent1 = new Intent(this,EmptyCartActivity.class);
             intent1.putExtra("user", uname);
             startActivity(intent1);
         }
     }
 
-    private void initRecyclerView() {
+    private void initRecyclerView1() {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         adapter2 = new RecyclerViewAdapter2(cartModels,this);
         recyclerView.setAdapter(adapter2);
@@ -84,12 +84,14 @@ public class ShoppingcartActivity extends AppCompatActivity {
             txttotalAmount.setText(totalAmount);
         }
 
-
-
-
     public void placeOrder(View view){
         DBHelperOrder dbHelperOrder = new DBHelperOrder(this);
         dbHelperOrder.addToOrders(cartModels);
         Toast.makeText(this, "Order added", Toast.LENGTH_LONG).show();
+    }
+
+    public void logout(View view){
+        Intent intent1 = new Intent(this, MainActivity.class);
+        startActivity(intent1);
     }
 }

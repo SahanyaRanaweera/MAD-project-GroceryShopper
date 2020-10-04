@@ -76,4 +76,9 @@ public class CategorylistActivity extends AppCompatActivity {
         intent1.putExtra("CategoryC",categoryClk);
         startActivity(intent1);
     }
+
+    public void logout(View view){
+        Intent intent1 = new Intent(this, MainActivity.class);
+        startActivity(intent1);
+    }
 }

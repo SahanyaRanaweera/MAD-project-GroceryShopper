@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.groceryshopper.Database.DBHelperShopCart;
+import com.example.groceryshopper.Model.CartModel;
 import com.example.groceryshopper.Model.DealsList;
 
 
@@ -24,6 +26,7 @@ public class RecyclerViewAdapter extends
     private static final String TAG = "test.recyclerview.RecyclerViewAdapter";
     private DealsList[] deals;
     private Context mContext;
+    CartModel cart;
 
     public RecyclerViewAdapter(DealsList[] deals , Context mContext) {
         this.deals = deals;
@@ -42,6 +45,7 @@ public class RecyclerViewAdapter extends
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: called");
         final DealsList dealsListData = deals[position];
+        cart = new CartModel(dealsListData.getImgName(), dealsListData.getPrice(),DashboardActivity.uname);
         holder.category.setText(deals[position].getCategory());
         holder.name.setText(deals[position].getImgName());
         holder.price.setText(deals[position].getPrice());
@@ -49,12 +53,29 @@ public class RecyclerViewAdapter extends
                 .asBitmap().load(deals[position].getImgUrl())
                 .into(holder.image);
         holder.addtocart.setText("Add to Cart");
+
         holder.addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Added item: "+dealsListData.getImgName()+" to cart",Toast.LENGTH_LONG).show();
+                boolean s = addItems(view);
+                if(s == true){
+                    Toast.makeText(view.getContext(),"Added item: "+dealsListData.getImgName()+" to cart",Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(view.getContext(),"Error in adding item",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
+    }
+
+    public boolean addItems(View v){
+        boolean success = false;
+        DBHelperShopCart dbHelperShopCart = new DBHelperShopCart(v.getContext());
+        long row = dbHelperShopCart.addToCart(cart);
+        if(row>0){
+            success = true;
+        }
+        return success;
     }
 
     @Override

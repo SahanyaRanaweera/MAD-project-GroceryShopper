@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.groceryshopper.Database.DBHelperItem;
@@ -50,5 +51,9 @@ public class CategoryActivity extends AppCompatActivity {
 
     }
 
+    public void logout(View view){
+        Intent intent1 = new Intent(this, MainActivity.class);
+        startActivity(intent1);
+    }
 
 }

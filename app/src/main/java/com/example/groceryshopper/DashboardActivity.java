@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class DashboardActivity extends AppCompatActivity {
     TextView user;
-    String uname;
+    public static String uname;
     public static final String USERNAME = "com.example.groceryshopper.username";
     @Override
     protected void onCreate(Bundle savedInstanceState) {

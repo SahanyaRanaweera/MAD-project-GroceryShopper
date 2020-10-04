@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.groceryshopper.Database.DBHelperCustomer;
@@ -46,5 +47,8 @@ public class DealsActivity extends AppCompatActivity {
 
     }
 
-
+    public void logout(View view){
+        Intent intent1 = new Intent(this, MainActivity.class);
+        startActivity(intent1);
+    }
 }

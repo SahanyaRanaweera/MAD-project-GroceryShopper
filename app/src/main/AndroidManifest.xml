@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".EmptyCartActivity"></activity>
-        <activity android:name=".DeliverOrderActivity"></activity>
         <activity android:name=".ShoppingcartActivity"></activity>
         <activity android:name=".CategorylistActivity"></activity>
         <activity android:name=".CategoryActivity"></activity>

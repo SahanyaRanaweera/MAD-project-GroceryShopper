@@ -50,4 +50,8 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
+    public void logout(View view){
+        Intent intent1 = new Intent(this, MainActivity.class);
+        startActivity(intent1);
+    }
 }

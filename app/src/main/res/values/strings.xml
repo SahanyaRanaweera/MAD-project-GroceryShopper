@@ -60,4 +60,5 @@
     <string name="note">Please note that payment will be on delivery</string>
     <string name="update">Update</string>
     <string name="remove">Remove</string>
+    <string name="back">Back to Dashboard</string>
 </resources>

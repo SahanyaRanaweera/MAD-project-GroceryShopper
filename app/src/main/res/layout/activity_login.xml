@@ -95,7 +95,7 @@
             android:layout_marginTop="30dp"
             android:background="@android:drawable/editbox_background"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:text="@string/input"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/etuname" />
