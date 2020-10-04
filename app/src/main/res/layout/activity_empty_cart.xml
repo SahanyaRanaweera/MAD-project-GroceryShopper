@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundhome"
-    tools:context=".CategorylistActivity">
+    android:isScrollContainer="true"
+    tools:context=".ShoppingcartActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -61,13 +62,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="395dp"
-        android:layout_height="449dp"
+        android:layout_height="400dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded_div1"
+        android:isScrollContainer="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +81,7 @@
             android:layout_width="191dp"
             android:layout_height="35dp"
             android:layout_marginTop="20dp"
-            android:text="@string/icategory"
+            android:text="@string/cart"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -89,17 +91,27 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="355dp"
+            android:layout_width="390dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="12dp"
             android:background="@android:color/background_light"
-            android:isScrollContainer="true"
             android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/categoryName" />
+            app:layout_constraintTop_toBottomOf="@+id/categoryName">
+
+
+            <TextView
+                android:id="@+id/emptyCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+        </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

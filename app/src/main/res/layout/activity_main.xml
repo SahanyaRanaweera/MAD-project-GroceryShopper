@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundhome"
+    android:isScrollContainer="true"
     tools:context=".MainActivity">
 
     <ImageView
@@ -19,13 +20,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="392dp"
-        android:layout_height="367dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded_div"
+        android:background="@drawable/rounded_div1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
             android:text="@string/tagline"
-            android:textColor="@color/textcolor"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -66,7 +67,7 @@
             android:layout_marginLeft="35dp"
             android:layout_marginTop="25dp"
             android:text="@string/desc"
-            android:textColor="@color/textcolor"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button" />
@@ -79,21 +80,23 @@
             android:layout_marginLeft="35dp"
             android:layout_marginTop="60dp"
             android:text="@string/desc1"
-            android:textColor="@color/textcolor"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="356dp"
-            android:layout_height="42dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="100dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/desc2"
-            android:textColor="@color/textcolor"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -103,6 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/rounded_corners"
+            android:onClick="goToLogin"
             android:text="@string/login"
             android:textColor="@android:color/background_light"
             app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -116,6 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/rounded_corners"
+            android:onClick="goToRegistration"
             android:text="@string/register"
             android:textColor="@android:color/background_light"
             app:layout_constraintEnd_toEndOf="parent"

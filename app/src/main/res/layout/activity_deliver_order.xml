@@ -19,30 +19,30 @@
         app:srcCompat="@drawable/shopcart" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="28dp"
         android:text="@string/uname"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/btlogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="8dp"
         android:text="@string/logout"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/user" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -55,7 +55,7 @@
         android:layout_marginRight="16dp"
         android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toEndOf="@+id/user"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/user" />
 
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/categoryName"
             android:layout_width="168dp"
             android:layout_height="42dp"
             android:layout_marginTop="20dp"
@@ -97,7 +97,7 @@
             android:textColor="@color/textcolor"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+            app:layout_constraintTop_toBottomOf="@+id/categoryName" />
 
         <TextView
             android:id="@+id/textView34"
@@ -152,7 +152,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/etuname"
             android:layout_width="218dp"
             android:layout_height="36dp"
             android:layout_marginStart="25dp"
@@ -163,7 +163,7 @@
             android:inputType="textPersonName"
             android:text="@string/input"
             app:layout_constraintStart_toEndOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+            app:layout_constraintTop_toBottomOf="@+id/categoryName" />
 
         <EditText
             android:id="@+id/editTextTextPersonName8"
@@ -177,7 +177,7 @@
             android:inputType="textPersonName"
             android:text="@string/input"
             app:layout_constraintStart_toEndOf="@+id/textView34"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/etuname" />
 
         <EditText
             android:id="@+id/editTextTextPersonName9"
