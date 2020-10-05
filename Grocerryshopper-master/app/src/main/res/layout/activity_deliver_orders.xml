@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeliverOrders"
+    android:background="#0328fc">
+
+    <ImageView
+        android:id="@+id/imgv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/a"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imgv"
+        android:id="@+id/txt12"
+        android:layout_marginLeft="40dp"
+        android:text="TODAY DELIVERY ORDERS"
+        android:textStyle="bold"
+        android:textSize="24sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/list1"
+        android:layout_marginTop="300dp"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:text="Big onion1kg"
+        android:layout_marginLeft="40dp"
+        android:textSize="18sp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/list2"
+        android:layout_marginTop="350dp"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:text="Tea 500g Pack1"
+        android:layout_marginLeft="40dp"
+        android:textSize="18sp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/list3"
+        android:layout_marginTop="400dp"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:text="Red Rice 5kg"
+        android:layout_marginLeft="40dp"
+        android:textSize="18sp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/list4"
+        android:layout_marginTop="450dp"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:text="Cheese Pack 01"
+        android:layout_marginLeft="40dp"
+        android:textSize="18sp"
+        ></TextView>
+
+    <Button
+        android:id="@+id/btnnext"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@+id/list4"
+        android:text="Next"
+        android:textStyle="bold"
+        android:textSize="25sp">
+
+    </Button>
+
+</RelativeLayout>

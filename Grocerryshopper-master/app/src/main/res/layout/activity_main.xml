@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="#0328fc">
+
+<ImageView
+    android:id="@+id/imgv"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:src="@drawable/a"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imgv"
+        android:text="ORDER LIST"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        android:textSize="24sp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/txtid"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="250dp"
+        android:text="C_ID"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="250dp"
+        android:text="Customer Name"
+        android:layout_marginLeft="100dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/txtaddress"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="250dp"
+        android:text="Address"
+        android:layout_marginLeft="300dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:textStyle="bold"
+        android:layout_marginTop="350dp"
+        android:text="001"
+        android:textSize="18sp"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="350dp"
+        android:textStyle="bold"
+        android:text="Paul"
+        android:layout_marginLeft="100dp"
+        android:textSize="18sp"
+
+        />
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="350dp"
+        android:textStyle="bold"
+        android:text="Lisbon"
+        android:layout_marginLeft="300dp"
+        android:textSize="18sp"
+
+        />
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:textStyle="bold"
+        android:layout_marginTop="400dp"
+        android:text="002"
+        android:textSize="18sp"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/txt5"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:textStyle="bold"
+        android:layout_marginTop="400dp"
+        android:text="Andrew"
+        android:layout_marginLeft="100dp"
+        android:textSize="18sp"
+></TextView>
+    <TextView
+        android:id="@+id/txt6"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="400dp"
+        android:text="York"
+        android:textStyle="bold"
+        android:layout_marginLeft="300dp"
+        android:textSize="18sp"
+
+        />
+    <Button
+        android:id="@+id/btnnext"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txt6"
+        android:layout_marginLeft="40dp"
+        android:text="Next"
+        android:textStyle="bold"
+        android:textSize="25sp">
+
+    </Button>
+
+</RelativeLayout>
