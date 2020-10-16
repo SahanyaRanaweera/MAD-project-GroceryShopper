@@ -12,6 +12,7 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -80,5 +81,17 @@ public class CategorylistActivity extends AppCompatActivity {
     public void logout(View view){
         Intent intent1 = new Intent(this, MainActivity.class);
         startActivity(intent1);
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent(CategorylistActivity.this, DashboardActivity.class);
+            intent.putExtra("USERNAME", uname);
+            finish();
+            startActivity(intent);
+        }
+
+        return true;
     }
 }

@@ -19,6 +19,9 @@ public class DashboardActivity extends AppCompatActivity {
         uname = intent.getStringExtra(RegisterActivity.USERNAME);
         if (uname == null){
             uname = intent.getStringExtra(LoginActivity.USERNAME);
+            if (uname == null){
+                uname=intent.getStringExtra("USERNAME");
+            }
         }
         user = findViewById(R.id.user);
         user.setText(uname);
@@ -36,6 +39,12 @@ public class DashboardActivity extends AppCompatActivity {
     }
     public void goToShoppingCart(View view1){
         Intent intent1 = new Intent(this, ShoppingcartActivity.class);
+        intent1.putExtra(USERNAME, uname);
+        startActivity(intent1);
+    }
+
+    public void goToFeedback(View view){
+        Intent intent1 = new Intent(this, FeedbackActivity.class);
         intent1.putExtra(USERNAME, uname);
         startActivity(intent1);
     }

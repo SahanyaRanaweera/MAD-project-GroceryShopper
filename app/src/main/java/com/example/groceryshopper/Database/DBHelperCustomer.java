@@ -17,7 +17,7 @@ import java.util.List;
 public class DBHelperCustomer extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "GroceryShopper2.db";
     public DBHelperCustomer(Context context) {
-        super(context, DATABASE_NAME, null, 10);
+        super(context, DATABASE_NAME, null, 12);
     }
 
     @Override

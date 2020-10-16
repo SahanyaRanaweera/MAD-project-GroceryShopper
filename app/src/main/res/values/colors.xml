@@ -9,4 +9,6 @@
     <color name="backgroundhome">#b6ee56</color>
     <color name="divhome">#f6e061</color>
     <color name="link">#2150f3</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="blackColor">#000000</color>
 </resources>

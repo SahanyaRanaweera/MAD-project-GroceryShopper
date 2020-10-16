@@ -32,7 +32,12 @@ public class LoginActivity extends AppCompatActivity {
             intent.putExtra(USERNAME, uname);
             Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
             startActivity(intent);
-        }else{
+        }else if(uname.equals("admin") && pwd.equals("admin")){
+            Intent intent = new Intent(this, AdminActivity.class);
+            Toast.makeText(this, "Login as admin", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+        }
+        else{
             Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show();
         }
     }
