@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -50,5 +51,17 @@ public class DealsActivity extends AppCompatActivity {
     public void logout(View view){
         Intent intent1 = new Intent(this, MainActivity.class);
         startActivity(intent1);
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent(DealsActivity.this, DashboardActivity.class);
+            intent.putExtra("USERNAME", uname);
+            finish();
+            startActivity(intent);
+        }
+
+        return true;
     }
 }

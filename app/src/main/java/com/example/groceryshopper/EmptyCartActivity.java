@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class EmptyCartActivity extends AppCompatActivity {
     TextView user;
     String uname;
-    public static final String USERNAME = "com.example.groceryshopper.username";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,7 @@ public class EmptyCartActivity extends AppCompatActivity {
     }
     public void gotoDashboard(View v){
         Intent intent1 = new Intent(this, DashboardActivity.class);
-        intent1.putExtra(USERNAME, uname);
+        intent1.putExtra("USERNAME", uname);
         startActivity(intent1);
     }
 }

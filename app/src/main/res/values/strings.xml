@@ -61,4 +61,8 @@
     <string name="update">Update</string>
     <string name="remove">Remove</string>
     <string name="back">Back to Dashboard</string>
+    <string name="FeedbackPart2">Do you have any feedback or suggestion would be appreciated?</string>
+    <string name="adminpg">Welcome to Admin page</string>
+    <string name="addStf">Staff records</string>
+    <string name="order">Check orders</string>
 </resources>

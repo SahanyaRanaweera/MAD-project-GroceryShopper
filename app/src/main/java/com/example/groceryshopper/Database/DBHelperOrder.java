@@ -13,7 +13,7 @@ public class DBHelperOrder extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "GroceryShopper2.db";
 
     public DBHelperOrder(Context context) {
-        super(context, DATABASE_NAME, null, 10);
+        super(context, DATABASE_NAME, null, 12);
     }
 
     @Override
@@ -36,7 +36,6 @@ public class DBHelperOrder extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS " + ShopCartMaster.ShopCartItems.TBL_NAME_3);
         onCreate(db);
     }
 
